@@ -26,3 +26,13 @@ function sorteiaRaridade(min, max) {
 }
 
 console.log(sorteiaRaridade(1, 100));
+
+function criaArrayRaridadePokemon() {
+    const arrayRaridadePokemon = [];
+    for (i = 0; i < 5; i++) {
+        arrayRaridadePokemon.push(sorteiaRaridade(1, 100));
+    }
+    return arrayRaridadePokemon;
+}
+
+console.log(criaArrayRaridadePokemon());
