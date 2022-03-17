@@ -1,8 +1,10 @@
+const pokemonUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`;
+
 function sorteiaNumeroPokemon(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function criaArrayNumeroPokemon() {
+function listaNumeroPokemon() {
     const arrayNumerosPokemon = [];
     for (i = 0; i < 5; i++) {
         arrayNumerosPokemon.push(sorteiaNumeroPokemon(1, 151));
@@ -10,24 +12,24 @@ function criaArrayNumeroPokemon() {
     return arrayNumerosPokemon;
 }
 
-console.log(criaArrayNumeroPokemon());
+console.log(listaNumeroPokemon());
 
 function sorteiaRaridade(min, max) {
     const numeroSorteado = Math.floor(Math.random() * (max - min + 1)) + min;
     let raridade = '';
-    if (numeroSorteado >= 1 && numeroSorteado <= 25) {
+    if (numeroSorteado == 1) {
         raridade = 'lendario';
-    } else if (numeroSorteado > 25 && numeroSorteado < 50) {
-        raridade = 'normal';
-    } else if (numeroSorteado >= 50 && numeroSorteado < 75) {
+    } else if (numeroSorteado > 1 && numeroSorteado <= 11) {
+        raridade = 'epico';
+    } else if (numeroSorteado > 11 && numeroSorteado <= 42) {
         raridade = 'raro';
-    } else raridade = 'epico';
+    } else raridade = 'normal';
     return raridade;
 }
 
 console.log(sorteiaRaridade(1, 100));
 
-function criaArrayRaridadePokemon() {
+function listaRaridadePokemon() {
     const arrayRaridadePokemon = [];
     for (i = 0; i < 5; i++) {
         arrayRaridadePokemon.push(sorteiaRaridade(1, 100));
@@ -35,4 +37,15 @@ function criaArrayRaridadePokemon() {
     return arrayRaridadePokemon;
 }
 
-console.log(criaArrayRaridadePokemon());
+console.log(listaRaridadePokemon());
+
+function listaPokemons() {
+    const numeroPokemon = listaNumeroPokemon();
+    const nomePokemon = [];
+    for (i = 0; i < 5; i++) {
+        nomePokemon.push(fetch(pokemonUrl(numeroPokemon[i])).then(response => response.json()).then(pokemon => { return pokemon.name }));
+    }
+    return nomePokemon;
+}
+
+console.log(listaPokemons());
