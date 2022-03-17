@@ -1,5 +1,6 @@
 const pokemonUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`;
 
+
 function rafflePokemonNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -50,3 +51,21 @@ function pokemonList() {
 
 console.log(pokemonList());
 
+function createCards() {
+    const cards = pokemonList();
+    const rarity = pokemonRarityList();
+    Promise.all(cartas).then((values) => {
+        for (i = 0; i < values.length; i++) {
+            const container = document.getElementById('cards-container');
+            container.innerHTML += `
+           <div class="card ${rarity[i]} card-tilt">
+            <p class="rarity-text">${rarity[i]}</P>
+            <img class="card-image" src=${values[i].sprites.other.dream_world.front_default}" />
+            <h2 class="number">Nº ${values[i].id}</h2>
+            <h1>${values[i].name}</h1>
+            <p>Type: ${values[i].types[0].type.name}</p>
+           </div>
+           `
+        }
+    })
+}
