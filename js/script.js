@@ -1,6 +1,7 @@
 const pokemonUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`;
 const boosterPack = document.getElementById('openPack');
 const closeCardsButton = document.getElementById('closeCards');
+closeCardsButton.hidden = true;
 const packQuantity = document.getElementById('packInfo');
 packQuantity.innerHTML = 5;
 
@@ -77,6 +78,14 @@ function countPacks() {
     packQuantity.innerHTML = packQuantity.innerHTML - 1;
 }
 
+function noMoreCards() {
+    const container = document.getElementById('cards-container');
+    container.innerHTML =  `
+    <div class="modal">
+    <h2>Tudo bem. Te esperamos na próxima!</h2>    
+    </div>`;
+}
+
 function closeCards() {
     const container = document.getElementById('cards-container');
     container.innerHTML = ``;
@@ -85,8 +94,13 @@ function closeCards() {
         boosterPack.hidden = true;
         closeCardsButton.hidden = true;
         container.innerHTML = `
-        <div>
+        <div class="modal">
         <h2>Você não tem mais pacotes!</h2>
+        <p>Conseguir mais pacotes?</p>
+        <span>
+        <button class="yes" onclick="window.location.reload()">Sim</button>
+        <button class="no" onclick="noMoreCards()">Não</button>
+        </span>
         </div>`
     } else boosterPack.hidden = false;
 }

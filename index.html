@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Card Pack Open</title>
 </head>
+
 <body>
     <div class="container" id="container">
+
         <div class="header">
-            <div>
+            <div class="header-left">
                 <h2 class="packInfo">Pacotes restantes:</h2>
                 <h2 class="packInfo" id="packInfo"></h2>
             </div>
-            <h2 class="closeCards" id="closeCards">X</h2>
+            <div class="page-title">
+                <h1>Abrir Pacote de Cartas</h1>
+            </div>
+            <div class="close-bt">
+                <h2 class="closeCards" id="closeCards">X</h2>
+            </div>
         </div>
-        <div class="openPack" id="openPack">
-            <img src="img/booster.png" class="pack-img">
-        </div>
-        <div id="cards-container"></div>
+
+    </div>
+    <div class="openPack" id="openPack">
+        <img src="img/booster.png" class="pack-img" data-tilt>
+    </div>
+    <div id="cards-container"></div>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/vanilla-tilt.js"></script>
 </body>
+
 </html>
