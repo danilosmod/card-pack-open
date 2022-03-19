@@ -17,8 +17,6 @@ function pokemonNumberList() {
     return arrayNumerosPokemon;
 }
 
-console.log(pokemonNumberList());
-
 function defineRarity(min, max) {
     const numeroSorteado = Math.floor(Math.random() * (max - min + 1)) + min;
     let rarity = '';
@@ -32,8 +30,6 @@ function defineRarity(min, max) {
     return rarity;
 }
 
-console.log(defineRarity(1, 100));
-
 function pokemonRarityList() {
     const pokemonRarityArray = [];
     for (i = 0; i < 5; i++) {
@@ -41,8 +37,6 @@ function pokemonRarityList() {
     }
     return pokemonRarityArray;
 }
-
-console.log(pokemonRarityList());
 
 function pokemonList() {
     const pokemonNumber = pokemonNumberList();
@@ -52,8 +46,6 @@ function pokemonList() {
     }
     return pokemonName;
 }
-
-console.log(pokemonList());
 
 function createCards() {
     const cards = pokemonList();
@@ -89,7 +81,7 @@ function noMoreCards() {
 function closeCards() {
     const container = document.getElementById('cards-container');
     container.innerHTML = ``;
-    closeCards.hidden = true;
+    closeCardsButton.hidden = true;
     if (packQuantity.innerHTML == 0) {
         boosterPack.hidden = true;
         closeCardsButton.hidden = true;
