@@ -23,7 +23,7 @@
 <P>Todas essas funcionalidade ocorrem no momento em que o usuário clica para efetuar a "abertura" do pacote de forma a deixar os eventos o menos previsíveis quanto possível.</P>
 
 <h2>Demonstração</h2>
-(img/card-pack-open.gif)
+<img src="img/card-pack-open.gif">
 
 <h2>Tecnologias utilizadas</h2>
     <table>
