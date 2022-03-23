@@ -58,3 +58,5 @@
         <li>Animar as cartas para aparecerem uma por vez</li>
         <li>Recriar a aplicação em React</li>
     </ul>
+    <h2>Você pode testa a aplicação aqui</h2>
+    <a href="https://card-pack-open.netlify.app/">Clique aqui para testar</a>
