@@ -46,14 +46,5 @@
         <li>A biblioteca <a href="https://micku7zu.github.io/vanilla-tilt.js/">vanilla tilt JS</a> foi utilizada para criar o efeito de perspectiva no pacote de cartas.</li>
     </ul>
     
-    <h2>Os possíveis próximos passos</h2>
-    <p>Este é um projeto que sempre está aberto a evolução. Abaixo uma lista de possíveis melhorias e implementações:</p>
-    <ul>
-        <li>Sistema de armazenamento das cartas</li>
-        <li>Sistema de moedas para compra de mais pacotes</li>
-        <li>Sistema de venda de cartas repitidas para obter moedas</li>
-        <li>Sistema de ganho de moedas ao longo do tempo ou como recompensas e determinadas ações</li>
-        <li>Aumentar o número de informações nas cartas</li>
-        <li>Animar as cartas para aparecerem uma por vez</li>
-        <li>Recriar a aplicação em React</li>
-    </ul>
+    
+ <h2>Os possíveis próximos passos</h2>
