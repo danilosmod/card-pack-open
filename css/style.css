@@ -275,6 +275,7 @@ body {
 
 @media (max-width: 800px) {
   .cards-container {
+    margin-top: 35px;
     flex-direction: column;
   }
 
